@@ -1,0 +1,18 @@
+﻿@model List<Product>
+
+	<table>
+
+@foreach(var a in Model)
+{
+	<tr>
+			<td>@a.ProductName</td>
+			<td>@a.UnitPrice</td>
+			<td><a asp-action="deleteproduct" asp-controller="Product" asp-route-id="@a.ProductId">delete</a></td>
+			<td><a asp-action="updateproduct" asp-controller="Product" asp-route-id="@a.ProductId">edite</a></td>
+	</tr>
+
+}
+
+</table>
+
+
